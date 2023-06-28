@@ -2,6 +2,7 @@ package com.exam.zhouyaosen.main.adapter.recycle;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -23,10 +24,28 @@ import java.util.Objects;
 
 public class Viewpager2_adapter extends RecyclerView.Adapter<Viewpager2_adapter.ViewHolder> {
     Context context;
-    public List<NovelContentPage> pagination = new ArrayList<>();
-    public List<NovelContentPage> p1;
-    public List<NovelContentPage> p2;
-    public List<NovelContentPage> p3;
+    private List<NovelContentPage> pagination = new ArrayList<>();
+    private List<NovelContentPage> p1;
+
+    public List<NovelContentPage> getPagination() {
+        return pagination;
+    }
+
+    public List<NovelContentPage> getP1() {
+        return p1;
+    }
+
+    public List<NovelContentPage> getP3() {
+        return p3;
+    }
+
+    private List<NovelContentPage> p2;
+    private List<NovelContentPage> p3;
+
+    public List<NovelContentPage> getP2() {
+        return p2;
+    }
+
     String title;
     int maxsize;
     int size;
@@ -232,6 +251,7 @@ public class Viewpager2_adapter extends RecyclerView.Adapter<Viewpager2_adapter.
         p3 = p2;
         p2 = p1;
         p1 = pages;
+
     }
 
     static class ViewHolder extends RecyclerView.ViewHolder {

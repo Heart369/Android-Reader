@@ -32,7 +32,6 @@ public class Pagelook {
         int count=textView.getLineCount();
         int pCount=getPageLineCount(textView);
         int pageNum = (int) Math.ceil((double) ((double) count/(double) pCount));
-        Log.d("TAGPA",pageNum+","+pCount);
         ArrayList<NovelContentPage> pages = new ArrayList<>();
         for(int i=0;i < pageNum;i++){
             NovelContentPage current_page = new NovelContentPage();

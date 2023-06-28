@@ -123,7 +123,7 @@ public class LookBookActivity extends BaseActivity {
                     int c1 = cs2.size();
                     adapter.setdown(cs2);
                     adapter.notifyDataSetChanged();
-                    Log.d("TAG", pos + "," + adapter.p3.size());
+                    Log.d("TAG", pos + "," + adapter.getP3().size());
                     if (viewPager2.getVisibility()==View.VISIBLE)
                     viewPager2.setCurrentItem(pos + c1, false);
                     else recy_main.scrollToPosition(pos+c1);
@@ -153,13 +153,14 @@ public class LookBookActivity extends BaseActivity {
                         cs1 = Pagelook.getPage(stringBuilder2.toString(), chatpter.data.chapterList.get(po).title, textview);
                         cs1.add(0, new NovelContentPage(true, cs1.get(0).getTitle()));
                     }
-                    int c = adapter.p1.size();
+                    int c = adapter.getP1().size();
+                    Log.d("TAGS",pcs-c+","+adapter.getP1().size());
                     adapter.setnext(cs1);
                     adapter.notifyDataSetChanged();
-                    Log.d("TAG", pos + "," + adapter.p1.size());
                     if (viewPager2.getVisibility()==View.VISIBLE)
                     viewPager2.setCurrentItem(pos - c, false);
-                    else recy_main.scrollToPosition(pcs-c);
+                    else recy_main.scrollToPosition(pcs-c-1);
+                    Log.d("TAG",pcs-c+","+adapter.getP1().size());
                     handler.postDelayed(new Runnable() {
                         @Override
                         public void run() {
@@ -266,17 +267,17 @@ public class LookBookActivity extends BaseActivity {
 
                 // 获取最后一个可见项的位置
                 int lastVisibleItemPosition = ((LinearLayoutManager) recyclerView.getLayoutManager()).findLastVisibleItemPosition();
-                if (po < chatpter.data.chapterList.size() - 2 && lastVisibleItemPosition > adapter.pagination.size() - adapter.p3.size() && resp1) {
+                if (po < chatpter.data.chapterList.size() - 2 && lastVisibleItemPosition > adapter.getPagination().size() - adapter.getP3().size() && resp1) {
                     request(chatpter.data.chapterList.get(++po + 1).chapterId, 4);
-                    Log.d("TAG","发起请求1");
+                    Log.d("TAG","发起请求1,"+lastVisibleItemPosition+","+adapter.getP1().size());
                     resp1 = false;
                 }
                 pcs=lastVisibleItemPosition;
                 pos = firstVisibleItemPosition;
                 sqLite.updateProgressByBookId(chatpter.data.fictionId,pos);
-                if (po >= 2 && firstVisibleItemPosition < adapter.p1.size() / 4 && resp2) {
+                if (po >= 2 && firstVisibleItemPosition < adapter.getP1().size() / 4 && resp2) {
                     request(chatpter.data.chapterList.get(--po - 1).chapterId, 3);
-                    Log.d("TAG","发起请求2");
+                    Log.d("TAG","发起请求2"+firstVisibleItemPosition);
                     resp2 = false;
                 }
                 long timestampInMilliseconds = System.currentTimeMillis();
@@ -288,6 +289,11 @@ public class LookBookActivity extends BaseActivity {
 
 
     private void viewpager(String text, String i2, String i3,boolean sx) {
+        int i1s=0,c = 0;
+        if (!sx){
+            i1s=adapter.getP1().size();
+            c=pos-i1s;
+        }
         Gson gson = new Gson();
         Look_bean look_bean1;
         StringBuilder stringBuilder1 = new StringBuilder();
@@ -339,20 +345,25 @@ public class LookBookActivity extends BaseActivity {
         adapter = new Viewpager2_adapter(this, cs, cs1, cs2, po, getTextcolor(), getTextSize(), getLineSize(), getLetterSize());
         else  adapter.InitData(cs,cs1,cs2);
         viewPager2.setAdapter(adapter);
-        if (pos==-1)
-        viewPager2.setCurrentItem(cs.size(), false);
-        else viewPager2.setCurrentItem(pos,false);
+        if (sx){
+            if (pos==-1)
+                viewPager2.setCurrentItem(cs.size(), false);
+            else viewPager2.setCurrentItem(pos,false);
+        }else {
+            viewPager2.setCurrentItem(adapter.getP1().size()+c,false);
+        }
+       
         viewPager2.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
             @Override
             public void onPageSelected(int position) {
-                if (po < chatpter.data.chapterList.size() - 2 && position > adapter.pagination.size() - adapter.p3.size() && resp1) {
+                if (po < chatpter.data.chapterList.size() - 2 && position > adapter.getPagination().size() - adapter.getP3().size() && resp1) {
                     request(chatpter.data.chapterList.get(++po + 1).chapterId, 4);
 
                     resp1 = false;
                 }
                 pos = position;
                 sqLite.updateProgressByBookId(chatpter.data.fictionId,pos);
-                if (po >= 2 && position < adapter.p1.size() / 4 && resp2) {
+                if (po >= 2 && position < adapter.getP1().size() / 4 && resp2) {
                     request(chatpter.data.chapterList.get(--po - 1).chapterId, 3);
                     resp2 = false;
                 }

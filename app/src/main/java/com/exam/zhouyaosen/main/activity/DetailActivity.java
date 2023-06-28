@@ -102,6 +102,7 @@ public class DetailActivity extends BaseActivity {
         initView();
         initData();
         initclick();
+
     }
 
     private void initclick() {

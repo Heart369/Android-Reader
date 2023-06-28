@@ -27,16 +27,13 @@
             android:textSize="22sp" />
     </androidx.appcompat.widget.Toolbar>
 
-    <androidx.core.widget.NestedScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/toolbar_login"
-        android:paddingBottom="50dp"
-        >
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolbar_login"
+            >
+
 
 
             <LinearLayout
@@ -111,13 +108,12 @@
                 android:background="#494949" />
 
             <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_below="@id/zw_xhx"
-                android:id="@+id/recycler"
-                />
+                android:layout_below="@id/zw_xhx" />
         </RelativeLayout>
-    </androidx.core.widget.NestedScrollView>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"

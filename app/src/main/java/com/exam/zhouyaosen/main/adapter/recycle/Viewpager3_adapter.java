@@ -2,6 +2,7 @@ package com.exam.zhouyaosen.main.adapter.recycle;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -27,11 +28,25 @@ public class Viewpager3_adapter extends Viewpager2_adapter {
     public List<NovelContentPage> p1;
     public List<NovelContentPage> p2;
     public List<NovelContentPage> p3;
+
+    public List<NovelContentPage> getPagination() {
+        return pagination;
+    }
+
+    public List<NovelContentPage> getP3() {
+        return p3;
+    }
+
     String title;
     int maxsize;
     int size;
     float evenx=0,eveny=0;
     int weight;
+
+    @Override
+    public List<NovelContentPage> getP1() {
+        return p1;
+    }
 
     int po;
     int textColor;
@@ -171,6 +186,8 @@ public class Viewpager3_adapter extends Viewpager2_adapter {
         }
 
         else{
+            if (pagination.get(position).getPage_content().contains("我是一串测试文本"))
+                pagination.get(position).setPage_content(pagination.get(position).getPage_content().replace("  我是一串测试文本，我是一串测试文本，我是一串测试文本，我是一串测试文本，我是一串测试文本，我是一串测试文本，",pagination.get(position).getTitle()+"\n\n"));
             holder.text.setText(pagination.get(position).getPage_content());
             holder.text.setTextSize(TypedValue.COMPLEX_UNIT_SP,textSize);
             holder.text.setLineSpacing(lines,1.0f);
@@ -223,6 +240,7 @@ public class Viewpager3_adapter extends Viewpager2_adapter {
         p1 = p2;
         p2 = p3;
         p3 = pages;
+        Log.d("TAGS",p1.size()+"");
     }
 
     public void setdown(List<NovelContentPage> pages) {
@@ -231,6 +249,7 @@ public class Viewpager3_adapter extends Viewpager2_adapter {
         p3 = p2;
         p2 = p1;
         p1 = pages;
+
     }
 
     static class ViewHolder extends RecyclerView.ViewHolder {
