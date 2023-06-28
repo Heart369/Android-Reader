@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f4f5f7"
+    >
+
+    <View
+        android:id="@+id/f3_zw"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/Bule" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/f3_zw"
+        android:background="@color/Bule"
+        android:fitsSystemWindows="false"
+        app:menu="@menu/user_menu">
+
+        <TextView
+            android:id="@+id/title_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="你的名字"
+            android:textColor="@color/white"
+            android:textSize="22sp" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar_login">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/user"
+                >
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/search_back"
+                    android:id="@+id/tx"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="2"
+                        android:textColor="#0e0e0e"
+                        android:text="若叶"
+                        android:textSize="25sp"
+                        android:gravity="left|center"
+                        android:paddingLeft="10dp"
+                        android:id="@+id/name"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="编辑个人资料"
+                        android:gravity="left|center"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+           <LinearLayout
+               android:background="@drawable/sbw"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="vertical"
+               android:layout_below="@+id/user"
+               android:layout_marginTop="20dp"
+               android:id="@+id/mybook"
+               android:padding="5dp"
+               >
+
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:text="我的书架>"
+                   android:textColor="#0e0e0e"
+                   android:textSize="22sp"
+                   android:textStyle="bold" />
+               <androidx.recyclerview.widget.RecyclerView
+                   android:layout_width="match_parent"
+                   android:layout_height="200dp"
+                   android:id="@+id/recy_mybook"
+                   />
+           </LinearLayout>
+            <LinearLayout
+                android:background="@drawable/sbw"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp"
+                android:layout_below="@+id/mybook"
+                android:layout_marginTop="20dp"
+                android:id="@+id/muzhuji"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="我的足迹>"
+                    android:textColor="#0e0e0e"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:id="@+id/recy_zj"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:background="@drawable/sbw"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@+id/muzhuji"
+                android:layout_marginTop="20dp"
+                android:id="@+id/zjzk"
+                android:padding="5dp"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="最近在看>"
+                    android:textColor="#0e0e0e"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:id="@+id/lookbook"
+                    />
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

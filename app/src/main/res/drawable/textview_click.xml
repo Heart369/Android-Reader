@@ -1,0 +1,19 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 点击时的背景 -->
+    <item android:state_pressed="true">
+        <shape>
+            <solid android:color="#5CA3FA" /> <!-- 蓝色 -->
+            <corners android:radius="8dp" /> <!-- 圆角半径，可以根据需要进行调整 -->
+            <stroke android:color="#5CB2F4" android:width="2dp" /> <!-- 边框线宽度和颜色 -->
+        </shape>
+    </item>
+
+    <!-- 默认状态的背景 -->
+    <item>
+        <shape>
+            <solid android:color="#D1D1D1" /> <!-- 黑色 -->
+            <corners android:radius="8dp" /> <!-- 圆角半径，可以根据需要进行调整 -->
+            <stroke android:color="#1B1B1B" android:width="2dp" /> <!-- 边框线宽度和颜色 -->
+        </shape>
+    </item>
+</selector>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="Unfold">
+        <attr name="text" format="string"/>
+        <attr name="plaintext" format="string"/>
+        <attr name="title_back" format="reference"/>
+    </declare-styleable>
+
+</resources>

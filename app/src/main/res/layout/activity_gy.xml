@@ -1,0 +1,441 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:Android="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_gy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#7FBFF6"
+        android:fitsSystemWindows="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_baseline_arrow_back_24">
+
+        <TextView
+            android:id="@+id/title_gy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="关于"
+            android:textColor="@color/white"
+            android:textSize="22sp" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar_gy"
+        android:layout_marginBottom="20dp"
+        Android:layout_editor_absoluteX="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/bbzd_re"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:layout_margin="20dp"
+                android:background="@drawable/ntm_ct"
+                android:transitionName="shareNames"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="30dp"
+                    app:cardCornerRadius="10dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/tb"
+
+                        >
+
+                    </ImageView>
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/bbzd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/card"
+                    android:layout_centerHorizontal="true"
+                    android:text="书语天地"
+                    android:textColor="#FFFFFF"
+                    android:textSize="30dp">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/version"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/bbzd"
+                    android:layout_centerHorizontal="true"
+                    android:text="版本号：1.0.0"
+                    android:textColor="#FFFFFF"
+                    android:textSize="30dp">
+
+                </TextView>
+            </RelativeLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@drawable/shape_11dp_corners"
+                android:paddingBottom="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bbzd_re">
+
+                <TextView
+                    android:id="@+id/textView29"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:text="关于我"
+                    android:textColor="#0e0e0e"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.05"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/head"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/my_tx"
+                    app:layout_constraintStart_toStartOf="@+id/textView29"
+                    app:layout_constraintTop_toBottomOf="@+id/textView29" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout5"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="24dp"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="@+id/head"
+                    app:layout_constraintStart_toEndOf="@+id/head"
+                    app:layout_constraintTop_toBottomOf="@+id/textView29"
+
+                    app:layout_constraintVertical_bias="0.0">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center|left"
+                        android:text="Heart"
+                        android:textColor="#0e0e0e"
+                        android:textStyle="bold">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center|left"
+                        android:text="开发&amp;设计" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/qq"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/sbw_blue"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="@+id/head"
+                    app:layout_constraintTop_toBottomOf="@+id/head">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="25dp"
+                        android:src="@drawable/qq" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center|left"
+                        android:paddingStart="20dp"
+                        android:text="QQ： Heart*若叶">
+
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/wx"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/sbw_blue"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="@+id/head"
+                    app:layout_constraintTop_toBottomOf="@+id/qq">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="25dp"
+                        android:src="@drawable/wx" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center|left"
+                        android:paddingStart="20dp"
+                        android:text="微信: 若叶">
+
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/bilibili"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/sbw_blue"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="@+id/head"
+                    app:layout_constraintTop_toBottomOf="@+id/wx">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="25dp"
+                        android:padding="2dp"
+                        android:src="@drawable/bilbil" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center|left"
+                        android:paddingStart="20dp"
+                        android:text="Bilibili： Heart若叶">
+
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/sbw_blue"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/bilibili">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="25dp"
+                        android:src="@drawable/email" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center|left"
+                        android:paddingStart="20dp"
+                        android:text="邮箱： a1306433549@163.com">
+
+                    </TextView>
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@drawable/shape_11dp_corners"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout6">
+
+                <TextView
+                    android:id="@+id/gybbzd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:text="关于书语天地"
+                    android:textColor="#0e0e0e"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.05"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.exam.zhouyaosen.main.base.Unfold
+                    android:id="@+id/u1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/gybbzd"
+                    app:plaintext="欢迎使用我们的小说阅读APP。本协议规定您与我们之间的权利义务关系，请仔细阅读，并确保了解和同意本协议的全部内容。如果您不同意本协议的任何内容，您应立即停止使用本应用。\n
+\n
+1.服务内容\n
+本应用的功能为小说阅读APP，可以快捷阅读各类小说\n
+\n
+2.用户责任\n
+用户在使用本应用时应遵守国家法律法规及各种服务条款、规则和规定，不得利用本应用从事任何违法或损害他人合法权益的行为，包括但不限于：\n
+\n
+利用本应用进行赌博、色情、传播谣言或虚假信息等行为；\n
+利用本应用进行广告或推销活动；\n
+通过篡改、伪造数据等方式破坏游戏的公平性和平衡性。\n
+用户应自行承担使用本应用的风险，对于其在本应用上的行为及其后果，应自行承担责任。如果因为用户的行为导致第三方或我们遭受损失，用户应负全部赔偿责任。\n
+\n
+3.服务的变更和终止\n
+我们有权根据实际情况对本应用的服务内容进行调整和变更，并有权随时终止向用户提供本应用的服务。用户应当及时关注本应用更新情况和版本升级，如未按要求操作或使用旧版应用，由此导致的问题由用户自行承担。\n
+\n
+4.条款变动和通知\n
+我们有权在必要时修改本协议的任何条款，且无需事先告知用户。新版本条款自发布之日起立即生效，用户应定期关注条款的更新情况。如果您继续使用本应用，即表示您已接受并同意修改后的条款。\n
+\n
+5.其他条款\n
+如本协议中的任何条款被视为违法、无效或因任何原因被认定为不可执行，则该条款应被视为可分割的，不影响其他条款的有效性和可执行性。\n
+\n
+以上是蹦蹦炸弹的服务条款，请您仔细阅读并理解后再使用本应用。如果您对内容有任何疑问或建议，欢迎随时联系我们。\n"
+                    app:text="服务条款"
+                    app:title_back="@drawable/sbw_blue">
+
+                </com.exam.zhouyaosen.main.base.Unfold>
+
+                <com.exam.zhouyaosen.main.base.Unfold
+                    android:id="@+id/u2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/u1"
+                    app:plaintext="感谢您使用本应用。请您在使用本应用前仔细阅读本声明。本声明中的我们是指本应用开发团队及运营人员，“本应用”是指蹦蹦炸弹 App。\n
+
+本应用提供小说功能，是一款辅助工具软件，旨在为玩家提供更好、更便捷的阅读体验。当您使用本应用时，您需要了解：\n
+
+1.本应用仅供参考和学习之用，产生的任何影响，我们概不负责。\n
+
+2.本应用所提供的所有信息和内容仅供参考，我们不保证其准确性、完整性、及时性或可靠性，也不对任何因使用这些信息或内容而引起的损失负责。\n
+
+3.请勿在游戏过程中使用本应用的任何功能进行外挂或进行违反游戏规则的操作，对于因此产生的一切后果，我们概不负责。\n
+
+4.本应用所引用的小说及相关版权属于各自公司或个人所有，我们不对其版权和合法性作出任何承诺或保证。\n
+
+5.本应用中可能会涉及到第三方网站或服务，我们无法控制这些网站或服务的内容或可靠性，对于因使用这些网站或服务而产生的任何问题，我们概不负责。\n
+
+6.我们有权在任何时候终止您使用本应用的权利，也有权在不提前通知的情况下进行更新、升级或者停止运营本应用。\n
+
+7.使用本应用即代表您已经完全理解并接受了本声明中所述的内容，如因使用本应用产生的任何问题及纠纷，均与本应用开发团队和运营人员无关。\n
+
+最后，祝您使用愉快"
+                    app:text="免责声明"
+                    app:title_back="@drawable/sbw_blue">
+
+                </com.exam.zhouyaosen.main.base.Unfold>
+
+                <com.exam.zhouyaosen.main.base.Unfold
+                    android:id="@+id/u3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/u2"
+                    app:plaintext="感谢您使用蹦蹦炸弹。我们承诺保护您的个人信息和数据安全，尊重您的隐私权利，制定本隐私政策以说明我们如何收集、使用、存储和保护您的信息。\n
+\n
+1.信息的类型\n
+我们可能会收集并使用以下类型的信息：\n
+•设备信息：例如设备型号、操作系统版本、唯一设备标识符等；\n
+•游戏信息：例如游戏名称、游戏等级、游戏记录等；\n
+•操作信息：例如您在使用应用时的操作行为、时间、频率和持续时间等；\n
+•其他信息：例如您反馈的意见和建议、位置信息（仅在您同意授权的情况下）、特定权限下的相册、相机访问等。\n
+\n
+2.信息的收集和使用方式\n
+我们可能通过以下方式收集和使用您的信息：\n
+•您主动提供的信息：例如您在应用中填写的表单、反馈意见等；\n
+•自动收集的信息：例如应用程序使用日志、cookie和类似技术；\n
+•第三方服务提供的信息：例如广告商提供的广告点击信息；\n
+•应用权限收集的信息：例如获取您的设备信息、位置信息、存储空间访问权限等。\n
+•我们会使用收集到的信息来改进应用的内容和功能，优化用户体验，为您更好地提供服务。我们承诺不会将您的个人信息用于非法行为，也不会向第三方出售或转让您的个人信息。\n
+\n
+3.信息的分享\n
+我们将保护您的隐私权利并尽力保密您的个人信息。但是，在下列情形下，我们可能会披露您的个人信息：\n
+•为了保证应用程序安全运行而与第三方共享信息；\n
+•根据适用法律、法规、法院命令、政府机关要求而共享信息；\n
+•向具有必要资格的第三方（例如我们的服务提供商）提供信息，以帮助我们向您提供服务；\n
+•如果我们的公司或资产被其他公司收购或合并，我们将向新所有者披露信息。\n
+我们承诺在上述情况下仅披露必要的信息，并对所披露的信息进行严格的保密和控制。\n\n
+4.信息的保护\n
+我们会采取各种技术措施和管理措施，以确保您的信息不受未经授权的访问、使用、披露、修改或破坏，包括但不限于加密、防火墙、密码保护和访问控制等。同时，我们会对所有工作人员进行信息保密培训，并建立内部管理机制，以确保信息安全。\n
+\n
+我们承诺在任何时候都不会泄露或出售您的个人信息，并将在符合适用法律、法规、政策的前提下妥善处理您的信息。\n
+
+5.未成年人信息处理\n
+我们十分重视未成年人的个人信息保护。如果您是未成年人，请在监护人的指导和监督下使用我们的应用。\n
+
+6.隐私政策的更新\n
+我们可能会不时更新本隐私政策的内容，以反映我们的信息处理实践、法律要求和业务变更等情况。如有重大变化，我们将通过适当方式通知您。在修订后的隐私政策上发布修订日期。\n
+\n
+7.联系我们\n
+如果您对本隐私政策或相关事项有任何疑问、意见或反馈，请联系我们。"
+                    app:text="隐私政策"
+                    app:title_back="@drawable/sbw_blue" />
+
+                <com.exam.zhouyaosen.main.base.Unfold
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/u3"
+                    android:id="@+id/u4"
+                    app:title_back="@drawable/sbw_blue"
+                    app:text="开源说明"
+                    app:plaintext="本项目已在github开源如有疑问请自行查阅代码\nhttps://github.com/Heart369/Android-Read"
+                    >
+
+                </com.exam.zhouyaosen.main.base.Unfold>
+                <LinearLayout
+                    android:id="@+id/fx"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/sbw_blue"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/u4"
+                    >
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="10dp"
+                        android:padding="2dp"
+                        android:src="@drawable/ic_baseline_share_24" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center|left"
+                        android:paddingStart="10dp"
+                        android:text="分享本软件"
+                        android:textSize="18sp">
+
+                    </TextView>
+                </LinearLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardUseCompatPadding="true"
+    android:background="#0e0e0e"
+    app:cardElevation="4dp"
+    app:cardCornerRadius="8dp">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/image_f1"
+        android:layout_width="120dp"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:transitionName="myImage"
+        android:src="#ECECEC"
+        android:padding="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="5dp"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="我可以穿越进热血传奇游戏"
+            android:textSize="20sp"
+            android:id="@+id/title"
+            android:textColor="#0e0e0e"
+            >
+        </TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:text="我可以穿越进热血传奇游戏我可以穿越进热血传奇游戏我可以穿越进热血传奇游戏我可以穿越进热血传奇游戏"
+            android:textSize="16sp"
+            android:textColor="@color/textDescription"
+            android:layout_weight="1"
+            android:maxLines="3"
+            android:ellipsize="end"
+            android:id="@+id/jj"
+            android:layout_marginTop="5dp"
+            >
+        </TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            android:text="我可以穿越进热血传奇游戏"
+            android:maxLines="1"
+            android:textColor="@color/textDescription"
+            android:ellipsize="end"
+            android:textSize="15sp"
+            android:gravity=""
+            android:id="@+id/zz"
+            android:layout_marginTop="5dp"
+            >
+        </TextView>
+    </LinearLayout>
+
+</LinearLayout>
+</androidx.cardview.widget.CardView>

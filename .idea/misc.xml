@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/xiaoshuo/app/src/main/res/drawable-v24/ic_baseline_change_history_24.xml" value="0.147" />
+        <entry key="..\:/xiaoshuo/app/src/main/res/drawable-v24/ic_baseline_share_24.xml" value="0.147" />
+        <entry key="..\:/xiaoshuo/app/src/main/res/drawable-v24/shape_11dp_corners.xml" value="0.147" />
+        <entry key="..\:/xiaoshuo/app/src/main/res/drawable/power.xml" value="0.147" />
+        <entry key="..\:/xiaoshuo/app/src/main/res/drawable/shape_19dp.xml" value="0.147" />
+        <entry key="..\:/xiaoshuo/app/src/main/res/layout/activity_detail.xml" value="0.25625" />
+        <entry key="..\:/xiaoshuo/app/src/main/res/layout/activity_gy.xml" value="0.22760416666666666" />
+        <entry key="..\:/xiaoshuo/app/src/main/res/layout/activity_look_book.xml" value="0.21770833333333334" />
+        <entry key="..\:/xiaoshuo/app/src/main/res/layout/fragemnt_user.xml" value="0.18" />
+        <entry key="..\:/xiaoshuo/app/src/main/res/layout/home_rect_item.xml" value="0.25625" />
+        <entry key="..\:/xiaoshuo/app/src/main/res/layout/home_rect_item_2.xml" value="0.25625" />
+        <entry key="..\:/xiaoshuo/app/src/main/res/layout/lookbook_home.xml" value="0.15416666666666667" />
+        <entry key="..\:/xiaoshuo/app/src/main/res/layout/lookbook_item.xml" value="0.22760416666666666" />
+        <entry key="..\:/xiaoshuo/app/src/main/res/layout/lookbook_item3.xml" value="0.22760416666666666" />
+        <entry key="..\:/xiaoshuo/app/src/main/res/layout/mytext.xml" value="0.25625" />
+        <entry key="..\:/xiaoshuo/app/src/main/res/layout/popupsize.xml" value="0.25" />
+        <entry key="..\:/xiaoshuo/app/src/main/res/layout/popupview.xml" value="0.3482789855072464" />
+        <entry key="..\:/xiaoshuo/app/src/main/res/layout/recy_fl.xml" value="0.22760416666666666" />
+        <entry key="..\:/xiaoshuo/app/src/main/res/layout/search_item.xml" value="0.25625" />
+        <entry key="..\:/xiaoshuo/app/src/main/res/layout/unfold.xml" value="0.22760416666666666" />
+        <entry key="..\:/xiaoshuo/app/src/main/res/layout/user_recy_item.xml" value="0.25625" />
+        <entry key="..\:/xiaoshuo/app/src/main/res/layout/viewpagerv.xml" value="0.3482789855072464" />
+        <entry key="..\:/xiaoshuo/app/src/main/res/menu/user_menu.xml" value="0.22760416666666666" />
+      </map>
+    </option>
+  </component>
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK" />
+</project>
