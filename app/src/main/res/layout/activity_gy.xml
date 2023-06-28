@@ -400,7 +400,7 @@
                     android:id="@+id/u4"
                     app:title_back="@drawable/sbw_blue"
                     app:text="开源说明"
-                    app:plaintext="本项目已在github开源如有疑问请自行查阅代码\nhttps://github.com/Heart369/Android-Read"
+                    app:plaintext="本项目已在github开源如有疑问请自行查阅代码\nhttps://github.com/Heart369/Android-Reader"
                     >
 
                 </com.exam.zhouyaosen.main.base.Unfold>
